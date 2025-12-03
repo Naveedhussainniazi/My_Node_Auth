@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { webData } from "../context/UserContext";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { logout } from "../utils/Api";
 
 const Dashboard = () => {
@@ -9,6 +9,7 @@ const Dashboard = () => {
   const handleLogout = async () => {
     await logout();
     setUser(null); // Clear user from context
+    Navigate("/login"); // Redirect to login page
   };
 
   return (

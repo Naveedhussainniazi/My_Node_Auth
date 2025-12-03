@@ -15,7 +15,7 @@ const Signup = () => {
   const formHandler = async (formData) => {
     try {
       const { data } = await API({
-        url: "/auth/signup",
+        url: "/auth/registration",
         method: "post",
         data: formData,
       });
